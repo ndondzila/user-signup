@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<body>
+
+    <style>
+        br {margin-bottom: 20px;}
+        .error {color: red;}
+
+    </style>
+
+    <form method='POST' action='/'>
+
+        <label>Username:
+            <input name="username" type="text" value={{username}}>
+        </label>
+            <span class='error'>{{username_error}}</span>
+        
+        <br>
+        
+        <label>Password:
+            <input name="password" type="password"/>
+        </label>
+            <span class='error'>{{password_error}}</span>
+        <br>
+        
+        <label>Verify password:
+            <input name="verify_password" type="password"/>
+        </label>
+        <span class="error">{{verify_error}}</span>
+        <br>
+
+        <label>Email(optional):
+            <input name="email" type="text" value={{email}}>
+        </label>
+            <span class='error'>{{email_error}}</span>
+
+        <input type="submit" value="Signup"/>
+        <span class="error">{{empty_fields_error}}</span>
+    </form>
+</body>
+</html>
